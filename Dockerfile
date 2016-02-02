@@ -14,7 +14,7 @@ RUN git clone https://github.com/tj/n.git n \
   && make install \
   && n 4.*
 
-# Install @panosoft/chronicle-server
+# Install server
 RUN npm install -g @panosoft/chronicle-server@"^0.1.0"
 
 EXPOSE 8443
