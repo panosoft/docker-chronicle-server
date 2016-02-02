@@ -1,0 +1,6 @@
+{
+  "report": "/report/bundle.js",
+  "parameters": {
+    "value": "Test value"
+  }
+}

@@ -1,0 +1,8 @@
+web:
+  build: ..
+  ports:
+    - "8443"
+  volumes:
+    - ./credentials:/credentials:ro
+    - ./report:/report:ro
+  restart: always
