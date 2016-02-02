@@ -9,13 +9,15 @@ RUN apt-get update && apt-get install --assume-yes \
   && rm -rf /var/lib/apt/lists/*
 
 # Install node
+ENV NODE_VERSION=4.2.6
 RUN git clone https://github.com/tj/n.git n \
   && cd n \
   && make install \
-  && n 4.*
+  && n $NODE_VERSION
 
 # Install server
-RUN npm install -g @panosoft/chronicle-server@"^0.1.0"
+ENV CHRONICLE_SERVER_VERSION=0.1.0
+RUN npm install -g @panosoft/chronicle-server@$CHRONICLE_SERVER_VERSION
 
 EXPOSE 8443
 
