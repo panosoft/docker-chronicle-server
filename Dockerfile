@@ -16,7 +16,7 @@ RUN git clone https://github.com/tj/n.git n \
   && n $NODE_VERSION
 
 # Install server
-ENV CHRONICLE_SERVER_VERSION=0.1.0
+ENV CHRONICLE_SERVER_VERSION=0.1.1
 RUN npm install -g @panosoft/chronicle-server@$CHRONICLE_SERVER_VERSION
 
 EXPOSE 8443
